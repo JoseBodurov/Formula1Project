@@ -1,0 +1,42 @@
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pathfinder</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
+</head>
+<body>
+<div class="wrapper">
+    <!-- Navigation -->
+    <div th:replace="~{fragment/navigation}"></div>
+
+    <form th:action="@{/races/race}"
+          th:method="GET"></form>
+
+    <section class="road">
+        <img src="/images/BahrainGpImg1.png" alt="Title image">
+        <div>
+            <h2>Bahrain GP</h2>
+            <p>The Bahrain Grand Prix (Arabic: جائزة البحرين الكبرى), officially known as the Gulf Air Bahrain Grand Prix for sponsorship reasons, is a Formula One motor racing event in Bahrain. The first race took place at the Bahrain International Circuit on 4 April 2004.
+                It made history as the first Formula One Grand Prix to be held in the Middle East, and was given the award for the "Best Organised Grand Prix" by the FIA.
+                The race has in the past been the second, third, or fourth race of the Formula One calendar</p>
+            <a id="RaceLearnBtn" href="/" class="btn">Learn More</a>
+        </div>
+    </section>
+</div>
+<!-- Wrapper Ends -->
+</body>
+<div th:replace="~{fragment/footer}"></div>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header th:fragment="navigation">
+    <nav class="main-nav">
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li th:unless="${@loggedUser.isLogged}">
+                <a th:href="@{/users/login}">Login</a>
+            </li>
+            <li>
+            <li th:unless="${@loggedUser.isLogged}">
+                <a th:href="@{/users/register}">Register</a>
+            </li>
+            <li>
+                <a th:href="@{/about}">About</a>
+            </li>
+            <li th:if="${@loggedUser.isLogged}">
+                <a th:href="@{/races/add}">Add experience</a>
+            </li>
+            <li th:if="${@loggedUser.isLogged}">
+                <a th:href="@{/profile}">Profile</a>
+            </li>
+            <li th:if="${@loggedUser.isLogged}">
+                <a th:href="@{/}">Admin</a>
+            </li>
+            <li>
+                <!--                    <form th:action="@{users/logout}" method="POST">-->
+                <!--                        <input type="submit" value="Logout">-->
+                <!--                    </form>-->
+
+            <li th:if="${@loggedUser.isLogged}">
+                <a th:href="@{/users/logout}">Logout</a>
+            </li>
+            <!--            <li>-->
+            <!--                <th:block th:text="${@loggedUser.username}== null ? 'no user' : ${@loggedUser.username}"></th:block>-->
+            <!--            </li>-->
+        </ul>
+    </nav>
+</header>
+</body>
+</html>
