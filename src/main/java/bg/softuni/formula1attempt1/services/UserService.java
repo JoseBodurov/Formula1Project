@@ -1,6 +1,7 @@
 package bg.softuni.formula1attempt1.services;
 
 import bg.softuni.formula1attempt1.models.User;
+import bg.softuni.formula1attempt1.models.view.UserProfileView;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,4 +10,6 @@ import java.util.List;
 public interface UserService {
 
     User getLoggedUser();
+
+    UserProfileView getUserProfile();
 }
