@@ -25,11 +25,11 @@
     <form th:action="@{/races/race}"
           th:method="GET"></form>
 
-    <section class="road">
+    <section th:each="race :${races} "class="road">
         <img src="/images/BahrainGpImg1.png" alt="Title image">
         <div>
-            <h2>Bahrain GP</h2>
-            <p>The Bahrain Grand Prix (Arabic: جائزة البحرين الكبرى), officially known as the Gulf Air Bahrain Grand Prix for sponsorship reasons, is a Formula One motor racing event in Bahrain. The first race took place at the Bahrain International Circuit on 4 April 2004.
+            <h2 th:text="${race.name}">Bahrain GP</h2>
+            <p th:text="${race.description}">The Bahrain Grand Prix (Arabic: جائزة البحرين الكبرى), officially known as the Gulf Air Bahrain Grand Prix for sponsorship reasons, is a Formula One motor racing event in Bahrain. The first race took place at the Bahrain International Circuit on 4 April 2004.
                 It made history as the first Formula One Grand Prix to be held in the Middle East, and was given the award for the "Best Organised Grand Prix" by the FIA.
                 The race has in the past been the second, third, or fourth race of the Formula One calendar</p>
             <a id="RaceLearnBtn" href="/" class="btn">Learn More</a>

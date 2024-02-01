@@ -35,4 +35,6 @@ resources: # Static resources
   cache:
     period: 0
 
+binding-result-package: org.springframework.validation.BindingResult
+
 
